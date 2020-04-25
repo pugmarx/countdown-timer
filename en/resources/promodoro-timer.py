@@ -34,13 +34,13 @@ while True:
   
     global flag
     flag = False
-    print("i = {}".format(i))  
+    #print("i = {}".format(i))  
     sleep(SLEEP_SEC)
     timer[i] = R
     sense.set_pixels(timer)
     while True:
       for event in sense.stick.get_events():
-          print("The joystick was {} {}".format(event.action, event.direction))
+          #print("The joystick was {} {}".format(event.action, event.direction))
           if event.action == ACTION_RELEASED:
               flag = True
               sense.clear()
